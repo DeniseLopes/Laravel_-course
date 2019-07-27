@@ -16,5 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('/contato,{id?}', ['uses'=>'ContatoController@index']);
+
 Route::post('contato', ['uses'=>'ContatoController@criar']);
+
 Route::put('contato', ['uses'=>'ContatoController@editar']);
+
+Route::resource('curso','CursoController');
