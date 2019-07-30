@@ -17,7 +17,9 @@ class CreateProdutosTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('descricao');
+            $table->string('imagem');
             $table->decimal('valor',5,2);
+            $table->enum('publicado',['sim','nao'])->default('nao');
             $table->timestamps();
         });
     }
